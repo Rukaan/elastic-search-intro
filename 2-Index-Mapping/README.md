@@ -30,13 +30,17 @@ PUT /books
 }
 ```
 Set `doc_values` to `false` if don't need sorting, aggregation, scripting (keyword)
+&nbsp;
 Set `norms` to `false` if don't need relevance scoring
+&nbsp;
 Set `index` to `false` if don't need filter on values
-
+&nbsp;
+&nbsp;
 Get index mapping
 ```
 GET /books/_mapping
 ```
+&nbsp;
 
 Add document 1
 ```
@@ -48,6 +52,7 @@ PUT /books/_doc/1
   "review": { "comment": "Good book" }
 }
 ```
+&nbsp;
 
 Add document 2
 ```
@@ -60,6 +65,7 @@ PUT /books/_doc/2
   "description":"books about adventure"
 }
 ```
+&nbsp;
 
 Get all data in index
 ```
@@ -70,6 +76,7 @@ GET /books/_search
     }
 }
 ```
+&nbsp;
 
 Query by name
 ```
@@ -80,6 +87,7 @@ GET /books/_search
     }
 }
 ```
+&nbsp;
 
 Query by description
 ```
@@ -90,6 +98,7 @@ GET /books/_search
     }
 }
 ```
+&nbsp;
 
 Query by status
 ```
@@ -100,6 +109,7 @@ GET /books/_search
     }
 }
 ```
+&nbsp;
 
 Query nested by author name
 ```
@@ -125,6 +135,7 @@ GET /books/_search
   }
 }
 ```
+&nbsp;
 
 Error query if not object not nested
 ```
@@ -144,6 +155,7 @@ GET /books/_search
   }
 }
 ```
+&nbsp;
 
 Add mapping to existing index
 ```
@@ -154,8 +166,10 @@ PUT /books/_mapping
   }
 }
 ```
+&nbsp;
 
 **Delete mapping is not possible**
+&nbsp;
 
 Delete index
 ```
