@@ -30,12 +30,13 @@ PUT /books
 }
 ```
 Set `doc_values` to `false` if don't need sorting, aggregation, scripting (keyword)
-
 &nbsp;
+
 Set `norms` to `false` if don't need relevance scoring
 &nbsp;
 
 Set `index` to `false` if don't need filter on values
+&nbsp;
 &nbsp;
 
 Get index mapping
