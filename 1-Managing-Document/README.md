@@ -1,4 +1,4 @@
-# Managing Document
+## Managing Document
 
 List all index
 ```
@@ -66,11 +66,13 @@ GET /products/_search
 }
 ```
 
-Get query data with format and source
+Get query data with format, source, size, and offset
 ```
 GET /products/_search?format=yaml
 {
     "_source": ["name","description"],
+    "size": 2,
+    "from": 0, 
     "query": {
       "match": { "description": "computer" }
     }

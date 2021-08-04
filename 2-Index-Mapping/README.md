@@ -17,7 +17,8 @@ PUT /books
         "type" : "nested",
         "properties": {
           "name": {
-            "type":"text"
+            "type":"text",
+            "doc_values":"false"
           }
         }
       },
@@ -28,6 +29,9 @@ PUT /books
   }
 }
 ```
+Set `doc_values` to `false` if don't need sorting, aggregation, scripting (keyword)
+Set `norms` to `false` if don't need relevance scoring
+Set `index` to `false` if don't need filter on values
 
 Get index mapping
 ```
@@ -39,7 +43,7 @@ Add document 1
 PUT /books/_doc/1
 {
   "name": "How to impress cook simple dinner",
-  "status":"PUBLISHED",
+  "status": "PUBLISHED",
   "author": { "name" : "john doe" },
   "review": { "comment": "Good book" }
 }
@@ -50,7 +54,7 @@ Add document 2
 PUT /books/_doc/2
 {
   "name": "How to train your dragon",
-  "status":"REVIEW",
+  "status": "REVIEW",
   "author": { "name" : "jane doe" },
   "review": { "comment": "i can tame a dragon now" },
   "description":"books about adventure"
@@ -72,7 +76,7 @@ Query by name
 GET /books/_search
 {
     "query": {
-      "match": { "name": "how" }
+      "match": { "name": "how to train" }
     }
 }
 ```
