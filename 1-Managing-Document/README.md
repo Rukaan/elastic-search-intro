@@ -1,4 +1,4 @@
-#Managing Document
+# Managing Document
 
 List all index
 ```
@@ -13,11 +13,6 @@ PUT /products
 Get index information
 ```
 GET /products
-```
-
-Get mapping information
-```
-GET /products/_mapping
 ```
 
 Upsert document (all)
@@ -80,6 +75,11 @@ GET /products/_search?format=yaml
       "match": { "description": "computer" }
     }
 }
+```
+
+Get mapping information
+```
+GET /products/_mapping
 ```
 
 Update document by query
