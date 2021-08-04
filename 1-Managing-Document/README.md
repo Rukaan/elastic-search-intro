@@ -44,7 +44,7 @@ POST /products/_doc/2
 ```
 &nbsp;
 
-Upsert document with Optimistic Concurrency controlling
+Upsert document with `Optimistic Concurrency Control`
 ```
 PUT /products/_doc/2?if_primary_term=1&if_seq_no=28
 { 
@@ -54,7 +54,7 @@ PUT /products/_doc/2?if_primary_term=1&if_seq_no=28
 ```
 &nbsp;
 
-Insert document without id
+Insert document without generated id
 ```
 POST /products/_doc
 { 
@@ -95,7 +95,7 @@ GET /products/_mapping
 ```
 &nbsp;
 
-Update document by query
+Update document by query script
 ```
 POST /products/_update_by_query
 {

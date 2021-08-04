@@ -46,7 +46,7 @@ GET /books/_mapping
 ```
 &nbsp;
 
-Add document 1
+Add document normal properties
 ```
 PUT /books/_doc/1
 {
@@ -58,7 +58,7 @@ PUT /books/_doc/1
 ```
 &nbsp;
 
-Add document 2
+Add document with undefined `description` properties
 ```
 PUT /books/_doc/2
 {
@@ -82,7 +82,7 @@ GET /books/_search
 ```
 &nbsp;
 
-Query by name
+Query by name (text type)
 ```
 GET /books/_search
 {
@@ -93,7 +93,7 @@ GET /books/_search
 ```
 &nbsp;
 
-Query by description
+Query by description (undefined mapping)
 ```
 GET /books/_search
 {
@@ -104,7 +104,7 @@ GET /books/_search
 ```
 &nbsp;
 
-Query by status
+Query by status (keyword type)
 ```
 GET /books/_search
 {
@@ -115,7 +115,7 @@ GET /books/_search
 ```
 &nbsp;
 
-Query nested by author name
+Query nested by author name (nested), and introduce relevance score
 ```
 GET /books/_search
 {
@@ -141,7 +141,7 @@ GET /books/_search
 ```
 &nbsp;
 
-Error query if not object not nested
+Error query if type object (not nested)
 ```
 GET /books/_search
 {
