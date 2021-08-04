@@ -175,6 +175,8 @@ PUT /books/_mapping
 **Delete mapping is not possible**
 &nbsp;
 
+&nbsp;
+
 Delete index
 ```
 DELETE /books
