@@ -39,6 +39,7 @@ Set `index` to `false` if don't need filter on values
 &nbsp;
 
 &nbsp;
+
 Get index mapping
 ```
 GET /books/_mapping
