@@ -126,7 +126,7 @@ POST /highlighting/1
 
 Query highlight with tags
 ```
-GET /highlighting/default/_search
+GET /highlighting/_search
 {
   "_source": false,
   "query": {
