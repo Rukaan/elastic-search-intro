@@ -65,33 +65,6 @@ GET /recipes/_search
 ```
 &nbsp;
 
-Query match phrases by title (order matters)
-```
-GET /recipes/_search
-{
-  "query": {
-    "match_phrase": {
-      "title": "spaghetti puttanesca"
-    }
-  }
-}
-```
-&nbsp;
-
-Query multi match fields
-```
-GET /recipes/_search
-{
-  "query": {
-    "multi_match": {
-      "query": "pasta",
-      "fields": [ "title", "description" ]
-    }
-  }
-}
-```
-&nbsp;
-
 ---
 
 Query ingredient name and preparation range with must
